@@ -195,8 +195,12 @@ webdesign/
 
 ---
 
-## 👥 Pengembang
+## 👥 Tim Pengembang & Desainer
 
-* **Desainer & Pengembang:** Egi Rizaldi
+Proyek ini dirancang dan dikembangkan bersama sebagai karya kolaboratif untuk kompetisi web design oleh:
+
+* **Egi Rizaldi** — *Lead Web Developer & UI/UX Designer*
+* **Waldi Bahri Hanif** — *Co-Developer & UI/UX Designer*
+
 * **Repositori Resmi:** [github.com/egirizaldi/project-web-design](https://github.com/egirizaldi/project-web-design)
 * **Lisensi:** Open-Source (Untuk Keperluan Evaluasi Kompetisi)

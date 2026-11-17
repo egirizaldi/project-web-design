@@ -2,6 +2,10 @@
   "name": "lestariway",
   "version": "1.0.0",
   "type": "module",
+  "contributors": [
+    "Egi Rizaldi",
+    "Waldi Bahri Hanif"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
