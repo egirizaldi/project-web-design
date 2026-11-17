@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id" data-eco="false">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LestariWay — Jelajahi Alam, Tinggalkan Jejak Kebaikan</title>
+  <meta name="description" content="Platform ekowisata terverifikasi dengan transparansi biaya 60/20/15/5, Eco-Score terbuka, dan kalkulator emisi jujur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Langsung ke konten utama</a>
+
+  <!-- Header: 3-Zone Balanced Layout -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="brand" aria-label="Beranda LestariWay">
+        <svg class="brand-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="var(--primary)" />
+          <path d="M7 22L13.5 11.5L18.5 18.5L21.5 14.5L25 22H7Z" stroke="#F8F5F0" stroke-width="1.6" stroke-linejoin="round" />
+          <circle cx="22" cy="10" r="2.2" fill="#B8512B" />
+        </svg>
+        <span>LestariWay</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#/explore" data-nav="explore">Jelajahi</a>
+        <a href="#/journal" data-nav="journal">Jurnal</a>
+        <a href="#/impact" data-nav="impact">Dampak Kami</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="ecoToggleBtn" class="eco-btn" type="button" aria-pressed="false" title="Aktifkan tema gelap OLED dan gambar hemat data">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+          </svg>
+          <span class="eco-label-full">Eco-Mode: Mati</span>
+          <span class="eco-label-short">Eco</span>
+        </button>
+
+        <a href="#/explore" class="btn btn-cta header-cta-btn" id="headerCta">Cari Destinasi</a>
+
+        <button id="mobileMenuBtn" class="btn btn-ghost menu-toggle" type="button" aria-expanded="false" aria-controls="mobileSheet" aria-label="Buka menu navigasi">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Full-Screen Navigation Sheet -->
+  <div id="mobileSheet" class="mobile-sheet" hidden role="dialog" aria-modal="true" aria-label="Menu navigasi">
+    <div class="row-between">
+      <span class="font-serif" style="font-size: 1.25rem; font-weight: 600;">Menu LestariWay</span>
+      <button id="closeMobileSheet" class="btn btn-ghost" type="button" aria-label="Tutup menu">Tutup</button>
+    </div>
+    <nav class="stack-sm" style="margin-top: 12px;">
+      <a href="#/" class="btn btn-secondary" data-mobile-nav>Beranda</a>
+      <a href="#/explore" class="btn btn-secondary" data-mobile-nav>Jelajahi Destinasi</a>
+      <a href="#/journal" class="btn btn-secondary" data-mobile-nav>Jurnal</a>
+      <a href="#/impact" class="btn btn-secondary" data-mobile-nav>Dampak Kami</a>
+      <a href="#/explore" class="btn btn-cta" data-mobile-nav>Cari Destinasi Sekarang</a>
+    </nav>
+  </div>
+
+  <!-- Optional Save-Data Banner -->
+  <div id="saveDataBanner" class="proto-banner" hidden>
+    <div class="container row-between">
+      <span class="small">Peramban Anda mengaktifkan mode hemat data. Aktifkan Eco-Mode untuk memuat gambar lebih ringan.</span>
+      <div class="row-wrap">
+        <button id="enableEcoFromBanner" class="btn btn-secondary" type="button" style="min-height: 34px; padding: 4px 10px;">Aktifkan</button>
+        <button id="dismissSaveData" class="btn btn-ghost" type="button" style="min-height: 34px; padding: 4px 10px;">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" tabindex="-1"></main>
+
+  <!-- Creative Rich Forest Footer -->
+  <footer class="site-footer">
+    <div class="footer-contour" aria-hidden="true">
+      <svg viewBox="0 0 1200 180" fill="none" preserveAspectRatio="none">
+        <path d="M0 120 Q 220 40, 480 110 T 960 90 T 1200 130" stroke="currentColor" stroke-width="1.2" opacity="0.16"/>
+        <path d="M0 145 Q 300 75, 580 135 T 1040 110 T 1200 155" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+        <path d="M0 90 Q 180 10, 420 75 T 880 60 T 1200 95" stroke="#B8512B" stroke-width="1.2" opacity="0.28"/>
+      </svg>
+    </div>
+
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="stack-sm">
+          <div class="brand" style="color: inherit;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#B8512B" />
+              <path d="M7 22L13.5 11.5L18.5 18.5L21.5 14.5L25 22H7Z" stroke="#F8F5F0" stroke-width="1.6" stroke-linejoin="round" />
+              <circle cx="22" cy="10" r="2.2" fill="#74C69D" />
+            </svg>
+            <span>LestariWay</span>
+          </div>
+          <p class="footer-tagline">
+            Berjalan pelan, menghormati batas daya dukung alam, dan memastikan 60% pengeluaranmu tinggal di desa.
+          </p>
+          <div class="row-wrap">
+            <span class="footer-pill">Low-Carbon Web Design</span>
+            <span class="footer-weight" id="pageWeightLabel">Menghitung beban halaman...</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-heading">Transparansi</span>
+          <ul class="footer-links">
+            <li><a href="#/impact">Laporan Dampak (Simulasi)</a></li>
+            <li><a href="#/impact#metodologi">Rumus Eco-Score 4 Pilar</a></li>
+            <li><a href="#/impact#asumsi">Sumber Data &amp; Asumsi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-heading">Destinasi Mitra</span>
+          <ul class="footer-links">
+            <li><a href="#/destination/nglanggeran">Desa Wisata Nglanggeran</a></li>
+            <li><a href="#/destination/menjangan">Pulau Menjangan</a></li>
+            <li><a href="#/destination/wae-rebo">Kampung Adat Wae Rebo</a></li>
+            <li><a href="#/destination/baluran">Savana &amp; Bakau Baluran</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-heading">Bacaan &amp; Jelajah</span>
+          <ul class="footer-links">
+            <li><a href="#/explore">Katalog Destinasi</a></li>
+            <li><a href="#/journal">Jurnal Lapangan</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-note">
+          <strong>Catatan Prototipe (PRD v1.2):</strong> Seluruh harga, skor, jarak, dan metrik dampak adalah <em>data ilustrasi prototipe</em>. Faktor emisi mengacu pada asumsi prototipe (KLHK/ESDM &amp; DEFRA). Untuk produk nyata, Eco-Score wajib diaudit pihak independen. Foto berasal dari aset prototipe berlisensi bebas pakai.
+        </p>
+        <div class="row-between xs" style="opacity:0.78; margin-top: 10px;">
+          <span>© 2026 LestariWay — Prototipe Ekowisata Berkelanjutan</span>
+          <span>60% untuk warga · 20% konservasi · 15% operasional · 5% platform</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Drawer Overlay (P0 + P1) -->
+  <div id="bookingBackdrop" class="backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer" id="bookingDrawer">
+      <div class="drawer-head">
+        <div>
+          <span class="eyebrow" id="drawerStepLabel">Langkah 1 dari 4</span>
+          <h2 id="drawerTitle" class="card-title">Reservasi Perjalanan</h2>
+        </div>
+        <button id="closeDrawerBtn" class="btn btn-ghost" type="button" aria-label="Tutup panel pemesanan" style="min-height: 40px; padding: 6px 12px;">Tutup</button>
+      </div>
+      <div class="drawer-body" id="drawerBody"></div>
+      <div class="drawer-foot" id="drawerFoot"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" hidden role="status" aria-live="polite">
+    <span id="toastMessage"></span>
+    <button id="toastClose" type="button" class="btn btn-ghost" style="min-height: 32px; padding: 2px 8px; color: inherit; border-color: currentColor;">Tutup</button>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
