@@ -1,8 +1,17 @@
 # 🌿 LestariWay — Jelajahi Alam, Tinggalkan Jejak Kebaikan
 
-> **Platform Ekowisata Berkelanjutan Terverifikasi** dengan Transparansi Biaya 60/20/15/5, Eco-Score 4 Pilar Terbuka, Kalkulator Emisi Jujur, dan Implementasi *Low-Carbon Web Design*.  
-> *Dikembangkan khusus untuk kebutuhan Kompetisi Web Design & Development.*
+> **Karya Web Design Competition: TECHNO VERSARY VOL. II**  
+> Diselenggarakan oleh **Himpunan Mahasiswa Teknik Informatika (HIMA-TI), Fakultas Ilmu Komputer, Universitas Kuningan**.  
+> **Tema Utama:** *"EcoDigital For Environment: Web Design Competition"*  
+> **Sub-tema yang Diusung:**  
+> • Sub-tema 3: *Konservasi Wisata Alam*  
+> • Sub-tema 4: *Travel Destination Ramah Lingkungan*  
+> • Sub-tema 9: *Portal Edukasi Lingkungan*  
+> • Sub-tema 10: *Galeri Dokumentasi Tentang Alam dan Pelestarian Lingkungan*  
+> • Sub-tema 12: *Media Informasi tentang Zero-waste Lifestyle & Daur Ulang*  
 
+[![Competition](https://img.shields.io/badge/Competition-Techno_Versary_Vol._II-1B4332?style=flat-square)](https://www.instagram.com/technoversary/)
+[![Organizer](https://img.shields.io/badge/Organizer-HIMA--TI_FKOM_UNIKU-B8512B?style=flat-square)](https://www.instagram.com/hima.ti.uniku/)
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?logo=react&logoColor=black&style=flat-square)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white&style=flat-square)](https://vitejs.dev/)
 [![Low-Carbon Web Design](https://img.shields.io/badge/Design-Low--Carbon-1B4332?style=flat-square)](https://sustainablewebdesign.org/)
@@ -38,7 +47,23 @@ Sektor pariwisata Indonesia menghadapi tiga krisis struktural yang sering kali d
 
 ---
 
-## ✨ 3. Fitur Utama & Inovasi Produk
+## 📄 3. Kelengkapan Halaman Minimal (Sesuai Ketentuan Guidebook)
+
+Platform ini memenuhi 100% struktur halaman yang diwajibkan oleh panitia:
+
+| Halaman Minimal | Rute SPA | Fungsi & Fitur Utama |
+| :--- | :--- | :--- |
+| **1. Halaman Home** | `#/` | Hero editorial, Smart Eco-Search, Live Impact Metrics, Bento Grid pilar, Mini Carbon Estimator, dan Donut 60/20/15/5. |
+| **2. Halaman About** | `#/about` | Visi & Misi LestariWay, 3 pilar nilai, metodologi kemitraan desa adat, serta profil tim pengembang & desainer. |
+| **3. Halaman Konten / Galeri** | `#/explore`<br>`#/destination/:slug` | Katalog 4 destinasi terverifikasi, filter audit multi-parameter, galeri foto 3:2 dokumentasi alam, radar 4 pilar Eco-score, dan rute emisi. |
+| **4. Halaman Artikel** | `#/journal` | Jurnal lapangan edukasi lingkungan, panduan kemas nol-sampah (*zero-waste lifestyle*), etika kampung adat, dan batas daya dukung. |
+| **5. Halaman Contact** | `#/contact` | Formulir korespondensi kemitraan interaktif dengan validasi real-time, saluran kontak resmi, dan FAQ singkat. |
+| *Ekstra: Booking Overlay* | Drawer Checkout | Alur pemesanan 4 langkah, perhitungan bibit mangrove, simulasi pembayaran, dan generator Paperless E-Pass (Canvas PNG). |
+| *Ekstra: Transparansi* | `#/impact` | Dasbor simulasi dampak, tabel matriks audit destinasi, dan pembuktian rumus metodologi terbuka. |
+
+---
+
+## ✨ 4. Fitur Utama & Inovasi Produk
 
 ### 🟢 A. Transparansi Alokasi Biaya (Formula 60/20/15/5)
 Setiap paket perjalanan dipecah transparan ke dalam bagan SVG Donat Interaktif & tabel audit:
@@ -60,9 +85,9 @@ Mengukur kepatuhan keberlanjutan destinasi secara objektif (skala 0–100):
 * Konversi kompensasi emisi ke bibit mangrove: **1 bibit = 22 kg penyerapan CO2e (Rp 15.000/bibit)**.
 
 ### 🌑 D. Low-Carbon Web Design & Eco-Mode Jujur
-* **Mode OLED Hemat Daya (`data-eco="true"`):** Latar belakang `#0D1310` ramah layar OLED, filter visual grayscale cerdas untuk mengurangi emisi piksel, dan reduced animation.
+* **Mode OLED Hemat Daya (`data-eco="true"`):** Latar belakang `#0D1310` ramah layar OLED, filter visual grayscale cerdas untuk mengurangi konsumsi daya piksel, dan reduced animation.
 * **Save-Data Integration:** Otomatis mendeteksi API `navigator.connection.saveData` peramban untuk menawarkan mode hemat.
-* **Indikator Beban Halaman Real-Time:** Menghitung total transfer aset peramban secara dinamis (`window.performance`) di bagian footer.
+* **Indikator Beban Halaman Real-Time:** Menghitung total transfer aset peramban secara dinamis (`window.performance`) di bagian footer pada setiap pergantian halaman.
 * **Zero Heavy Frameworks:** Tidak menggunakan library CSS berat (seperti Bootstrap/Tailwind bawaan yang bloating) demi meminimalisir transfer data (<300 KB gzipped).
 
 ### 🎫 E. Alur Pemesanan 4 Langkah (Paperless Checkout Drawer)
@@ -73,7 +98,7 @@ Mengukur kepatuhan keberlanjutan destinasi secara objektif (skala 0–100):
 
 ---
 
-## 🎨 4. Desain Sistem & Tipografi
+## 🎨 5. Desain Sistem & Tipografi
 
 Menggabungkan estetika *Nature Editorial Book* dengan kehangatan bumi Nusantara:
 
@@ -92,47 +117,15 @@ Menggabungkan estetika *Nature Editorial Book* dengan kehangatan bumi Nusantara:
 
 ---
 
-## 🏗️ 5. Arsitektur Teknis
+## 🛡️ 6. Pernyataan Orisinalitas & Anti-Template
 
-Aplikasi ini dibangun menggunakan arsitektur modern berbasis komponen React 19 dan Vite:
-
-```text
-webdesign/
-├── src/
-│   ├── components/            # Komponen modular reusable
-│   │   ├── AllocationDonut.jsx    # SVG Donut Chart interaktif 60/20/15/5
-│   │   ├── BookingDrawer.jsx      # Modal drawer pemesanan (4 langkah + A11y focus trap)
-│   │   ├── Footer.jsx             # Footer ramah lingkungan & monitor page weight
-│   │   ├── Header.jsx             # Navigasi sticky, tombol Eco-Mode & burger menu
-│   │   ├── MobileSheet.jsx        # Menu navigasi mobile full-screen (keyboard trap)
-│   │   ├── SaveDataBanner.jsx     # Banner peramban hemat data
-│   │   └── Toast.jsx              # Notifikasi popup real-time
-│   ├── context/               # Global state management (React Context)
-│   │   ├── BookingContext.jsx     # State alur pemesanan, kota asal, dan focus restoration
-│   │   ├── EcoModeContext.jsx     # State tema Eco-Mode, persistensi localStorage
-│   │   └── ToastContext.jsx       # State antrean pesan toast
-│   ├── data/
-│   │   └── data.js                # Single Source of Truth (Destinasi, Emisi, LNT, Jurnal)
-│   ├── pages/                 # Halaman utama aplikasi (SPA Hash Routing)
-│   │   ├── HomePage.jsx           # Beranda, Hero, Kalkulator Emisi, Storyteller
-│   │   ├── ExplorePage.jsx        # Katalog terverifikasi + multi-filter kriteria
-│   │   ├── DestinationDetailPage.jsx # Rincian destinasi, galeri 3:2, radar 4 pilar
-│   │   ├── JournalPage.jsx        # Jurnal panduan lapangan & artikel zero-waste
-│   │   ├── ImpactPage.jsx         # Laporan transparansi, tabel audit, dan rumus
-│   │   └── NotFoundPage.jsx       # Fallback 404 informatif
-│   ├── utils/
-│   │   └── helpers.js             # Helper format Rupiah, kalkulasi bibit, fallback SVG
-│   ├── styles.css             # Vanilla CSS murni dengan CSS custom properties
-│   ├── App.jsx                # Router utama & sinkronisasi dokumen/anchor
-│   └── main.jsx               # React DOM root entry point
-├── index.html                 # HTML shell dengan meta SEO & favicon SVG
-├── package.json               # Dependensi & script eksekusi
-└── vite.config.js             # Konfigurasi bundler Vite
-```
+Sesuai aturan ketat pada Guidebook Techno Versary Vol. II:
+* **100% Buatan Sendiri:** Seluruh komponen antarmuka, tata letak, logika interaktif, dan CSS ditulis secara mandiri dari awal tanpa menggunakan *template jadi* (seperti template HTML komersial, Tailwind UI berbayar, atau Bootstrap Themes premium).
+* **Aset Bebas Pakai & Open-Source:** Seluruh foto dan ikon menggunakan aset berlisensi bebas pakai (*free-to-use prototype assets*), SVG kustom, dan pustaka open-source resmi (React 19, Vite).
 
 ---
 
-## ♿ 6. Standar Aksesibilitas (A11y - WCAG 2.1 AA)
+## ♿ 7. Standar Aksesibilitas (A11y - WCAG 2.1 AA)
 
 * **Keyboard Navigation:**
   * Seluruh modal drawer dan navigasi mobile dilengkapi **Focus Trap** (perputaran fokus tombol `Tab` terkunci di dalam dialog).
@@ -144,7 +137,7 @@ webdesign/
 
 ---
 
-## 🚀 7. Panduan Instalasi & Menjalankan Proyek
+## 🚀 8. Panduan Instalasi & Menjalankan Proyek
 
 ### Prasyarat
 * **Node.js:** Versi 18.0 atau lebih tinggi (disarankan v20+)
@@ -182,22 +175,21 @@ webdesign/
 
 ---
 
-## 🏆 8. Pemetaan Terhadap Kriteria Penilaian Lomba
+## 🏆 9. Pemetaan Terhadap Rubrik Penilaian Dewan Juri
 
-| Kriteria Penilaian | Implementasi di LestariWay |
-| :--- | :--- |
-| **Kesesuaian Tema & Orisinalitas** | Konsep ekowisata terverifikasi anti-greenwashing dengan rumus transparan yang dapat diverifikasi publik. |
-| **Kualitas Visual & UI Design** | Desain editorial bertema bumi dengan paduan warna hangat, tata letak grid modular, tipografi Fraunces & Jakarta Sans. |
-| **Pengalaman Pengguna (UX)** | Alur pemesanan jelas (4 langkah), kalkulator emisi interaktif instan, filter multi-parameter tanpa reload, feedback toast responsif. |
-| **Inovasi Interaktif** | Diagram SVG alokasi biaya interaktif, generator Paperless E-Pass berbasis HTML5 Canvas langsung di browser, dan mode Eco OLED. |
-| **Efisiensi Teknis & Low-Carbon** | Kompilasi ultra-cepat Vite (<250ms), CSS murni tanpa framework bloating, ukuran bundle minimalis (<300 KB), performa skor tinggi. |
-| **Aksesibilitas (A11y)** | Kepatuhan WCAG AA, focus trap keyboard, skip navigation, kontras tinggi, atribut ARIA lengkap. |
+| Kriteria Penilaian di Guidebook | Bobot | Implementasi Nyata di LestariWay |
+| :--- | :---: | :--- |
+| **Kesesuaian Tema Lingkungan** | **30%** | Sangat inline dengan *"EcoDigital For Environment"*. Solusi nyata terhadap 5 sub-tema sekaligus, kalkulator karbon, transparansi konservasi mangrove, dan kode hemat energi. |
+| **User Experience (UX)** | **25%** | Alur pemesanan jelas (4 langkah), kalkulator emisi interaktif instan, filter multi-parameter tanpa reload, feedback toast responsif, dan auto-scroll anchor. |
+| **Desain Visual & Estetika** | **20%** | Desain editorial bertema bumi dengan paduan warna hangat, tata letak grid modular, tipografi Fraunces & Jakarta Sans, dan diagram SVG interaktif. |
+| **Testing dan Performa** | **15%** | Kompilasi ultra-cepat Vite (<250ms), CSS murni tanpa framework bloating, ukuran bundle minimalis (<300 KB), dan monitor beban halaman real-time. |
+| **Fungsionalitas Website** | **10%** | Seluruh fitur aktif 100%: Filter katalog, Eco-Score radar, Donut 60/20/15/5, drawer checkout, canvas generator E-Pass PNG, dan formulir kontak validasi. |
 
 ---
 
 ## 👥 Tim Pengembang & Desainer
 
-Proyek ini dirancang dan dikembangkan bersama sebagai karya kolaboratif untuk kompetisi web design oleh:
+Karya ini diajukan untuk **Web Design Competition — Techno Versary Vol. II** oleh:
 
 * **Egi Rizaldi** — *Lead Web Developer & UI/UX Designer*
 * **Waldi Bahri Hanif** — *Co-Developer & UI/UX Designer*

@@ -69,6 +69,12 @@ export default function MobileSheet({ isOpen, onClose }) {
         <a href="#/impact" className="btn btn-secondary" data-mobile-nav onClick={onClose}>
           Dampak Kami
         </a>
+        <a href="#/about" className="btn btn-secondary" data-mobile-nav onClick={onClose}>
+          Tentang Kami
+        </a>
+        <a href="#/contact" className="btn btn-secondary" data-mobile-nav onClick={onClose}>
+          Hubungi Kami
+        </a>
         <a href="#/explore" className="btn btn-cta" data-mobile-nav onClick={onClose}>
           Cari Destinasi Sekarang
         </a>

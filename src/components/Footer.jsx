@@ -102,6 +102,12 @@ export default function Footer({ currentPath }) {
               <li>
                 <a href="#/journal">Jurnal Lapangan</a>
               </li>
+              <li>
+                <a href="#/about">Tentang Kami</a>
+              </li>
+              <li>
+                <a href="#/contact">Hubungi Kami</a>
+              </li>
             </ul>
           </div>
         </div>

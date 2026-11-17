@@ -7,6 +7,8 @@ export default function Header({ currentPath, onOpenMobileMenu }) {
   const isExploreActive = currentPath === '/explore' || currentPath.startsWith('/destination/');
   const isJournalActive = currentPath === '/journal';
   const isImpactActive = currentPath === '/impact';
+  const isAboutActive = currentPath === '/about';
+  const isContactActive = currentPath === '/contact';
 
   return (
     <header className="site-header">
@@ -28,7 +30,13 @@ export default function Header({ currentPath, onOpenMobileMenu }) {
             Jurnal
           </a>
           <a href="#/impact" className={isImpactActive ? 'active' : ''} data-nav="impact">
-            Dampak Kami
+            Dampak
+          </a>
+          <a href="#/about" className={isAboutActive ? 'active' : ''} data-nav="about">
+            Tentang
+          </a>
+          <a href="#/contact" className={isContactActive ? 'active' : ''} data-nav="contact">
+            Kontak
           </a>
         </nav>
 

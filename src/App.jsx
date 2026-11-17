@@ -11,6 +11,8 @@ import ExplorePage from './pages/ExplorePage';
 import DestinationDetailPage from './pages/DestinationDetailPage';
 import JournalPage from './pages/JournalPage';
 import ImpactPage from './pages/ImpactPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 import { ToastProvider } from './context/ToastContext';
@@ -68,6 +70,10 @@ function MainLayout() {
       document.title = 'Jurnal Lapangan — LestariWay';
     } else if (path === '/impact') {
       document.title = 'Laporan Dampak & Transparansi — LestariWay';
+    } else if (path === '/about') {
+      document.title = 'Tentang Inisiatif Kami — LestariWay';
+    } else if (path === '/contact') {
+      document.title = 'Hubungi Kami — LestariWay';
     } else {
       document.title = '404 Halaman Tidak Ditemukan — LestariWay';
     }
@@ -91,6 +97,12 @@ function MainLayout() {
     }
     if (path === '/impact') {
       return <ImpactPage anchor={anchor} />;
+    }
+    if (path === '/about') {
+      return <AboutPage />;
+    }
+    if (path === '/contact') {
+      return <ContactPage />;
     }
     return <NotFoundPage />;
   };
