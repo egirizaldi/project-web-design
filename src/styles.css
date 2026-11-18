@@ -51,6 +51,11 @@ html[data-eco="true"] {
   --shadow-md: none;
 }
 
+html[data-eco="true"] ::placeholder {
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -476,6 +481,17 @@ table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 0.8
 th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border-decor); }
 th { background: var(--surface); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
 tr:last-child td { border-bottom: 0; }
+table tbody tr.active-row {
+  background: var(--primary-soft);
+  font-weight: 600;
+}
+table tbody tr.clickable-row {
+  cursor: pointer;
+  transition: background var(--t-fast);
+}
+table tbody tr.clickable-row:hover:not(.active-row) {
+  background: var(--surface);
+}
 
 /* Storyteller & Compact Leave No Trace */
 .story-card {
@@ -582,6 +598,14 @@ html[data-eco="true"] .footer-heading { color: var(--primary); }
   font-size: 0.875rem; display: flex; align-items: center; justify-content: space-between; gap: 12px;
 }
 .toast[hidden] { display: none; }
+@media (max-width: 480px) {
+  .toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}
 .proto-banner {
   background: var(--surface); border-bottom: 1px solid var(--border-decor);
   padding: 7px 0; font-size: 0.8rem;

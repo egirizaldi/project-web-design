@@ -180,26 +180,28 @@ export default function DestinationDetailPage({ slug }) {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Warga Lokal &amp; Adat</td>
-                      <td>60%</td>
-                      <td>{formatRp(Math.round(dest.price * 0.6))}</td>
-                    </tr>
-                    <tr>
-                      <td>Dana Konservasi</td>
-                      <td>20%</td>
-                      <td>{formatRp(Math.round(dest.price * 0.2))}</td>
-                    </tr>
-                    <tr>
-                      <td>Operasional Lapangan</td>
-                      <td>15%</td>
-                      <td>{formatRp(Math.round(dest.price * 0.15))}</td>
-                    </tr>
-                    <tr>
-                      <td>Platform LestariWay</td>
-                      <td>5%</td>
-                      <td>{formatRp(Math.round(dest.price * 0.05))}</td>
-                    </tr>
+                    {[
+                      { label: 'Warga Lokal & Adat', pct: '60%', amount: formatRp(Math.round(dest.price * 0.6)) },
+                      { label: 'Dana Konservasi', pct: '20%', amount: formatRp(Math.round(dest.price * 0.2)) },
+                      { label: 'Operasional Lapangan', pct: '15%', amount: formatRp(Math.round(dest.price * 0.15)) },
+                      { label: 'Platform LestariWay', pct: '5%', amount: formatRp(Math.round(dest.price * 0.05)) },
+                    ].map((item, idx) => (
+                      <tr
+                        key={idx}
+                        className={`clickable-row ${activeSlice === idx ? 'active-row' : ''}`}
+                        onClick={() => setActiveSlice(idx)}
+                        title="Klik untuk menyorot di diagram donat"
+                      >
+                        <td>
+                          <span className="row-wrap" style={{ gap: '8px' }}>
+                            {activeSlice === idx && <span style={{ color: 'var(--primary)', fontSize: '0.8rem' }}>●</span>}
+                            <span>{item.label}</span>
+                          </span>
+                        </td>
+                        <td><strong>{item.pct}</strong></td>
+                        <td>{item.amount}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>

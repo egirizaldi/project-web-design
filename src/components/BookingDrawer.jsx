@@ -111,34 +111,184 @@ export default function BookingDrawer() {
 
   const handleSavePassPng = () => {
     const c = document.createElement('canvas');
-    c.width = 720;
-    c.height = 380;
+    c.width = 840;
+    c.height = 460;
     const ctx = c.getContext('2d');
+
+    // Outer card background (Forest Green border)
     ctx.fillStyle = '#1B4332';
-    ctx.fillRect(0, 0, 720, 380);
+    ctx.fillRect(0, 0, 840, 460);
+
+    // Inner ticket background (Alabaster Cream)
     ctx.fillStyle = '#F8F5F0';
-    ctx.fillRect(24, 24, 672, 332);
-    ctx.fillStyle = '#B8512B';
-    ctx.font = 'bold 16px sans-serif';
-    ctx.fillText('LESTARIWAY PAPERLESS E-PASS (SIMULASI)', 48, 72);
-    ctx.fillStyle = '#1F2421';
-    ctx.font = 'bold 34px serif';
-    ctx.fillText(bookingCode, 48, 124);
-    ctx.font = '18px sans-serif';
-    ctx.fillText(dest.name, 48, 174);
-    ctx.fillStyle = '#525B56';
-    ctx.font = '16px sans-serif';
-    ctx.fillText(`Peserta: ${name} (${pax} org) • Tanggal: ${date}`, 48, 212);
-    ctx.fillText(`Moda: ${EMISSION_FACTORS[mode]?.label || mode} • Total: ${formatRp(grandTotal)}`, 48, 244);
+    ctx.fillRect(20, 20, 800, 420);
+
+    // Header banner bar
     ctx.fillStyle = '#1B4332';
-    ctx.font = 'bold 14px sans-serif';
-    ctx.fillText(`60% langsung ke warga (${formatRp(Math.round(tripCost * 0.6))})`, 48, 304);
+    ctx.fillRect(20, 20, 800, 64);
+
+    // Header logo mark (Brand Badge)
+    ctx.fillStyle = '#B8512B';
+    ctx.fillRect(44, 34, 36, 36);
+    ctx.fillStyle = '#F8F5F0';
+    ctx.font = 'bold 18px sans-serif';
+    ctx.fillText('LW', 51, 59);
+
+    // Header title & tagline
+    ctx.fillStyle = '#F8F5F0';
+    ctx.font = 'bold 20px sans-serif';
+    ctx.fillText('LESTARIWAY', 92, 51);
+    ctx.fillStyle = '#A9BCB1';
+    ctx.font = '12px sans-serif';
+    ctx.fillText('PAPERLESS CONSERVATION E-PASS • JELAJAHI ALAM, TINGGALKAN JEJAK KEBAIKAN', 92, 68);
+
+    // Header status badge
+    ctx.fillStyle = '#74C69D';
+    ctx.fillRect(660, 36, 136, 30);
+    ctx.fillStyle = '#0D1310';
+    ctx.font = 'bold 11px sans-serif';
+    ctx.fillText('VERIFIKASI DIGITAL', 674, 55);
+
+    // Booking Code Title
+    ctx.fillStyle = '#B8512B';
+    ctx.font = 'bold 12px sans-serif';
+    ctx.fillText('KODE RESERVASI RESMI', 48, 120);
+
+    // Booking Code
+    ctx.fillStyle = '#1F2421';
+    ctx.font = 'bold 36px Georgia, serif';
+    ctx.fillText(bookingCode, 48, 160);
+
+    // Destination Name & Category
+    ctx.fillStyle = '#1B4332';
+    ctx.font = 'bold 22px sans-serif';
+    ctx.fillText(dest.name, 48, 200);
+    ctx.fillStyle = '#525B56';
+    ctx.font = '14px sans-serif';
+    ctx.fillText(`${dest.location} • Durasi ${dest.duration} • Eco-Score: ${dest.ecoScore}/100`, 48, 224);
+
+    // Horizontal separator
+    ctx.strokeStyle = '#DCD6CA';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(48, 240);
+    ctx.lineTo(580, 240);
+    ctx.stroke();
+
+    // Passenger & Trip Details (Column 1)
+    ctx.fillStyle = '#525B56';
+    ctx.font = '12px sans-serif';
+    ctx.fillText('NAMA TAMU / PEMESAN', 48, 268);
+    ctx.fillStyle = '#1F2421';
+    ctx.font = 'bold 16px sans-serif';
+    ctx.fillText(name || 'Tamu LestariWay', 48, 290);
+
+    ctx.fillStyle = '#525B56';
+    ctx.font = '12px sans-serif';
+    ctx.fillText('JUMLAH PESERTA & TANGGAL', 48, 325);
+    ctx.fillStyle = '#1F2421';
+    ctx.font = 'bold 15px sans-serif';
+    ctx.fillText(`${pax} Orang • Berangkat: ${date}`, 48, 345);
+
+    // Passenger & Trip Details (Column 2)
+    ctx.fillStyle = '#525B56';
+    ctx.font = '12px sans-serif';
+    ctx.fillText('MODA TRANSPORTASI PP', 320, 268);
+    ctx.fillStyle = '#1F2421';
+    ctx.font = 'bold 15px sans-serif';
+    ctx.fillText(`${EMISSION_FACTORS[mode]?.label || mode} (${co2PerPerson * pax} kg CO2e)`, 320, 290);
+
+    ctx.fillStyle = '#525B56';
+    ctx.font = '12px sans-serif';
+    ctx.fillText('TOTAL TRANSAKSI SIMULASI', 320, 325);
+    ctx.fillStyle = '#1B4332';
+    ctx.font = 'bold 17px sans-serif';
+    ctx.fillText(formatRp(grandTotal), 320, 346);
+
+    // Bottom impact banner
+    ctx.fillStyle = '#DCEBE2';
+    ctx.fillRect(48, 375, 532, 42);
+    ctx.fillStyle = '#1B4332';
+    ctx.font = 'bold 13px sans-serif';
+    ctx.fillText(`✓ 60% DITERIMA LANGSUNG OLEH WARGA LOKAL (${formatRp(Math.round(tripCost * 0.6))})`, 64, 401);
+
+    // Vertical dashed perforation line between main pass & ticket stub
+    ctx.setLineDash([6, 6]);
+    ctx.strokeStyle = '#8A8478';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(615, 84);
+    ctx.lineTo(615, 440);
+    ctx.stroke();
+    ctx.setLineDash([]); // Reset dash
+
+    // Ticket Stub (Right Section)
+    ctx.fillStyle = '#525B56';
+    ctx.font = 'bold 11px sans-serif';
+    ctx.fillText('KODE VERIFIKASI', 645, 120);
+
+    // Simulated QR Code Graphic Matrix
+    const qrX = 645;
+    const qrY = 138;
+    const qrSize = 130;
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(qrX, qrY, qrSize, qrSize);
+    ctx.strokeStyle = '#1B4332';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(qrX, qrY, qrSize, qrSize);
+
+    // Draw QR corner boxes & pattern
+    ctx.fillStyle = '#1B4332';
+    // Top-left corner
+    ctx.fillRect(qrX + 8, qrY + 8, 28, 28);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(qrX + 13, qrY + 13, 18, 18);
+    ctx.fillStyle = '#1B4332';
+    ctx.fillRect(qrX + 17, qrY + 17, 10, 10);
+
+    // Top-right corner
+    ctx.fillRect(qrX + qrSize - 36, qrY + 8, 28, 28);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(qrX + qrSize - 31, qrY + 13, 18, 18);
+    ctx.fillStyle = '#1B4332';
+    ctx.fillRect(qrX + qrSize - 27, qrY + 17, 10, 10);
+
+    // Bottom-left corner
+    ctx.fillRect(qrX + 8, qrY + qrSize - 36, 28, 28);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(qrX + 13, qrY + qrSize - 31, 18, 18);
+    ctx.fillStyle = '#1B4332';
+    ctx.fillRect(qrX + 17, qrY + qrSize - 27, 10, 10);
+
+    // Center matrix blocks
+    for (let r = 0; r < 7; r++) {
+      for (let col = 0; col < 7; col++) {
+        if ((r + col) % 2 === 0 || (r * col) % 3 === 0) {
+          ctx.fillRect(qrX + 46 + col * 6, qrY + 46 + r * 6, 4.5, 4.5);
+        }
+      }
+    }
+
+    // QR instructions & Leave No Trace Seal
+    ctx.fillStyle = '#525B56';
+    ctx.font = '10px sans-serif';
+    ctx.fillText('PINDAI SAAT TIBA DI POS', 645, 292);
+    ctx.fillText('LEAVE NO TRACE VERIFIED', 645, 310);
+
+    ctx.fillStyle = '#B8512B';
+    ctx.font = 'bold 11px sans-serif';
+    ctx.fillText('100% PAPERLESS', 645, 345);
+
+    ctx.fillStyle = '#525B56';
+    ctx.font = '9px sans-serif';
+    ctx.fillText('Simpan di ponsel cerdas Anda.', 645, 365);
+    ctx.fillText('Tidak perlu dicetak di atas kertas.', 645, 380);
 
     const a = document.createElement('a');
     a.href = c.toDataURL('image/png');
-    a.download = `${bookingCode}.png`;
+    a.download = `E-PASS-${bookingCode}.png`;
     a.click();
-    showToast('E-Pass PNG berhasil diunduh.');
+    showToast('Paperless E-Pass (PNG) beresolusi tinggi berhasil diunduh.');
   };
 
   return (

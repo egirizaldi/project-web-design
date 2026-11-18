@@ -99,6 +99,7 @@ export default function ExplorePage({ queryParams }) {
               <span className="field-label">Eco-Score Minimal</span>
               {[
                 { v: 80, l: 'Semua (≥ 80)' },
+                { v: 85, l: 'Standar Ekowisata (≥ 85)' },
                 { v: 90, l: 'Tinggi (≥ 90)' },
                 { v: 95, l: 'Eksepsional (≥ 95)' },
               ].map((o) => (
