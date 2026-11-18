@@ -147,8 +147,8 @@ Sesuai aturan ketat pada Guidebook Techno Versary Vol. II:
 
 1. **Clone Repositori:**
    ```bash
-   git clone https://github.com/egirizaldi/project-web-design.git
-   cd project-web-design
+   git clone https://github.com/egirizaldi/webdesign_uteyeh_technoversary_vol.II.git
+   cd webdesign_uteyeh_technoversary_vol.II
    ```
 
 2. **Instal Dependensi:**
@@ -191,8 +191,10 @@ Sesuai aturan ketat pada Guidebook Techno Versary Vol. II:
 
 Karya ini diajukan untuk **Web Design Competition — Techno Versary Vol. II** oleh:
 
-* **Egi Rizaldi** — *Lead Web Developer & UI/UX Designer*
-* **Waldi Bahri Hanif** — *Co-Developer & UI/UX Designer*
+* **Nama Tim:** Tim Uteyeh
+* **Anggota Tim:**
+  * **Egi Rizaldi** — *Lead Web Developer & UI/UX Designer*
+  * **Waldi Bahri Hanif** — *Co-Developer & UI/UX Designer*
 
-* **Repositori Resmi:** [github.com/egirizaldi/project-web-design](https://github.com/egirizaldi/project-web-design)
+* **Repositori Resmi:** [github.com/egirizaldi/webdesign_uteyeh_technoversary_vol.II](https://github.com/egirizaldi/webdesign_uteyeh_technoversary_vol.II)
 * **Lisensi:** Open-Source (Untuk Keperluan Evaluasi Kompetisi)
