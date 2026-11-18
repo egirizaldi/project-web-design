@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 export default function Footer({ currentPath }) {
   const [pageWeight, setPageWeight] = useState('Menghitung beban halaman...');
@@ -42,11 +43,7 @@ export default function Footer({ currentPath }) {
         <div className="footer-top">
           <div className="stack-sm">
             <div className="brand" style={{ color: 'inherit' }}>
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                <rect width="32" height="32" rx="8" fill="#B8512B" />
-                <path d="M7 22L13.5 11.5L18.5 18.5L21.5 14.5L25 22H7Z" stroke="#F8F5F0" strokeWidth="1.6" strokeLinejoin="round" />
-                <circle cx="22" cy="10" r="2.2" fill="#74C69D" />
-              </svg>
+              <Logo size={30} />
               <span>LestariWay</span>
             </div>
             <p className="footer-tagline">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEcoMode } from '../context/EcoModeContext';
+import Logo from './Logo';
 
 export default function Header({ currentPath, onOpenMobileMenu }) {
   const { ecoMode, toggleEcoMode } = useEcoMode();
@@ -14,11 +15,7 @@ export default function Header({ currentPath, onOpenMobileMenu }) {
     <header className="site-header">
       <div className="container header-inner">
         <a href="#/" className="brand" aria-label="Beranda LestariWay">
-          <svg className="brand-mark" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <rect width="32" height="32" rx="8" fill="var(--primary)" />
-            <path d="M7 22L13.5 11.5L18.5 18.5L21.5 14.5L25 22H7Z" stroke="#F8F5F0" strokeWidth="1.6" strokeLinejoin="round" />
-            <circle cx="22" cy="10" r="2.2" fill="#B8512B" />
-          </svg>
+          <Logo size={32} />
           <span>LestariWay</span>
         </a>
 

@@ -183,8 +183,12 @@ export default function ContactPage() {
                     <strong>Senin – Sabtu (08.00 – 17.00 WIB)</strong>
                   </div>
                   <div className="row-between" style={{ borderBottom: '1px solid var(--border-decor)', paddingBottom: '8px' }}>
-                    <span className="muted">Kompetisi:</span>
-                    <strong>Techno Versary Vol. II UNIKU</strong>
+                    <span className="muted">Wilayah Kemitraan:</span>
+                    <strong>Jawa, Bali, &amp; Flores (NTT)</strong>
+                  </div>
+                  <div className="row-between" style={{ borderBottom: '1px solid var(--border-decor)', paddingBottom: '8px' }}>
+                    <span className="muted">Kebijakan Privasi:</span>
+                    <strong>Zero-Tracker &amp; Bebas Iklan</strong>
                   </div>
                   <div className="row-between">
                     <span className="muted">Status Audit:</span>
